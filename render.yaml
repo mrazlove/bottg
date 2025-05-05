@@ -6,7 +6,7 @@ services:
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python main.py"
     envVars:
-      - key: 7758579141:AAHpP65JwImvdAhUSQCYCphPbQcj5y3tq60
-        value: your_bot_token
+      - key: BOT_TOKEN
+        value: 7758579141:AAHpP65JwImvdAhUSQCYCphPbQcj5y3tq60
       - key: WEBHOOK_URL
         value: https://your-app-name.onrender.com
