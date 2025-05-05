@@ -54,3 +54,6 @@ def index():
         bot.set_webhook(f"{webhook_url}/{TOKEN}")
         return f"Webhook установлен: {webhook_url}/{TOKEN}"
     return "Поставь переменную окружения WEBHOOK_URL"
+    
+if name == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
