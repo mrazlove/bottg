@@ -50,11 +50,11 @@ def webhook():
 
 @app.route("/")
 def index():
-    webhook_url = os.environ.get("WEBHOOK_URL")  # https://your-service.onrender.com
-    if webhook_url:
-        bot.set_webhook(f"{webhook_url}/{TOKEN}")
-        return f"Webhook установлен: {webhook_url}/{TOKEN}"
-    return "Поставь переменную окружения WEBHOOK_URL"
+    url = os.environ.get("WEBHOOK_URL")
+    if url:
+        bot.set_webhook(f"{url}/{TOKEN}")
+        return f"Webhook установлен: {url}/{TOKEN}"
+    return "Переменная WEBHOOK_URL не задана"
     
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
